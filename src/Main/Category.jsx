@@ -1,10 +1,11 @@
 import React from 'react'
+import {ChevronDown} from "lucide-react"
 
 export default function Category() {
     const category = [
         {
             id: 1,
-            name : "Mobiles and Tablets",
+            name : "Mobiles",
             img : "https://rukminim2.flixcart.com/fk-p-flap/128/128/image/5f2ee7f883cdb774.png?q=100",
             nav :""
         },
@@ -33,12 +34,13 @@ export default function Category() {
         }
     ]
   return (
-    <div className='flex items-center justify-around px-0 md:px-20 '>
+    <div className='flex items-center justify-around px-0 md:px-20 py-2'>
         {category.map((item,index)=>(
-            <div className='bg-white p-2 flex flex-col items-center justify-center' key={index}>
+            <div className='bg-white p-1 md:p-2 flex  items-end justify-center border border-[#FF9899] rounded-xl' key={index}>
 
-                <img src={item.img} className='h-15 w-15 md:h-20 md:w-20' alt="404" />
-                <h6 className='text-sm font-semibold'>{item.name}</h6>
+               
+                <h6 className='text-xs md:text-sm font-semibold'>{item.name}</h6>
+                <ChevronDown className='h-4'/>
             </div>
             
         ))}

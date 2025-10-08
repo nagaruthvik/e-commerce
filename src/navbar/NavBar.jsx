@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 
-import { ShoppingCart, CircleUser, EllipsisVertical } from "lucide-react";
+import { ShoppingCart, CircleUser, EllipsisVertical,Heart } from "lucide-react";
 
 export default function NavBar() {
   const [accountTab,openAccountTab] = useState(false)
   const [dotTab,openDotTab] = useState(false)
+
+  const [signIn,setSignIn] = useState(false)
 
   const [isHover,setHoverd] = useState(false)
 
@@ -44,7 +46,8 @@ export default function NavBar() {
           <ShoppingCart  className="text-white cursor-pointer hover:drop-shadow-[0_0_10px_white]"  />
         </section>
         <section>
-          <CircleUser onClick={handleAccountTab}   className="text-white cursor-pointer hover:drop-shadow-[0_0_10px_white]" />
+          {signIn ? <div>
+            <CircleUser onClick={handleAccountTab}   className="text-white cursor-pointer hover:drop-shadow-[0_0_10px_white]" />
           {
             accountTab && (
               <div className="absolute  p-4 shadow-md bg-white item-center justify-center flex flex-col md:gap-5 gap-2">
@@ -56,6 +59,12 @@ export default function NavBar() {
               </div>
             )
           }
+          </div> : <p className="text-white"  >Log In</p> }
+          
+          
+        </section>
+         <section>
+          <Heart className="text-white cursor-pointer hover:drop-shadow-[0_0_10px_white]"  />
         </section>
         <section>
           <EllipsisVertical  onClick={handleDotTab}   className="text-white cursor-pointer hover:drop-shadow-[0_0_10px_white]"  />
@@ -70,6 +79,7 @@ export default function NavBar() {
             )
           }
         </section>
+       
       </section>
     </div>
   );
