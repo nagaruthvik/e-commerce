@@ -4,37 +4,26 @@ import Category from "./Main/Category";
 import Carousel from "./Main/Carousel";
 import TopProducts from "./Main/TopProducts";
 import Footer from "./Footer";
-
-import { MoveUp } from "lucide-react";
 import TopSection from "./Main/TopSection";
 
 export default function HomePage() {
   return (
-    <section className="flex flex-col h-screen">
-     <div className="fixed top-0 left-0 w-full z-50">
-        <NavBar />
-      </div>
-
-      
-
-      <section className="flex-[8]  flex flex-col gap-10 justify-around h-full pt-34 md:pt-20 p-5">
-        <section className="flex-2 ">
+    <div className="flex flex-col  bg-[#fff0e6]">
+      <main className="flex-1 flex flex-col gap-8 p-5 mt-4">
+        <div className="bg-[#ffe1cc] p-2 rounded-md shadow-sm">
           <Category />
-        </section>
-        <section className="shadow-md flex-4 ">
+        </div>
+        <div className="bg-[#ffe1cc] p-4 rounded-md shadow-md">
           <Carousel />
-        </section>
-        <section className="flex-4">
-          <section>
-            <TopProducts />
-          </section>
-          <section>
-             <TopSection/>
-          </section>
-        </section>
-        
-      </section>
+        </div>
+        <div className="bg-[#ffe1cc] p-4 rounded-md shadow-sm">
+          <TopProducts />
+        </div>
+        <div className="bg-[#ffe1cc] p-4 rounded-md shadow-sm">
+          <TopSection />
+        </div>
+      </main>
       <Footer />
-    </section>
+    </div>
   );
 }

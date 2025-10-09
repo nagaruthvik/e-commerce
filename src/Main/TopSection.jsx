@@ -66,23 +66,18 @@ export default function TopSection() {
     );
     setTopProducts(updated);
   };
-  const handleLeave = (id) => {
-    const updated = topProducts.map((item) =>
-      item.id === id ? { ...item, active: false } : { ...item, active: false }
-    );
-    setTopProducts(updated);
-  };
 
   return (
     <div className="">
+      
       <div className="p-3 flex items-center justify-between">
-        <h1 className="text-xl font-bold  ">Top Section</h1>
+        <h1 className="text-xl font-bold  ">Top Products</h1>
         <p className="text-sm ">View all</p>
       </div>
       <div className="px-3">
-        <hr className="border border-[#D3D3D3]" />
+        <hr className="border border-[#fff0e6]" />
       </div>
-
+      
       <br />
       <div className="flex flex-wrap items-center justify-around p-3">
         {topProducts.map((item, index) => (
@@ -92,7 +87,6 @@ export default function TopSection() {
               item.active == true ? "border-[#FF9899]" : "border-none"
             } flex-col items-center shadow-md rounded-md p-3 md:p-4`}
             onMouseEnter={() => handleActive(item.id)}
-            onMouseLeave={()=>handleLeave(item.id)}
           >
             <img className=" h-25 w-25 md:h-35 md:w-30" src={item.img} alt="" />
             <div className="flex flex-col items-start">

@@ -36,7 +36,7 @@ export default function Category() {
   return (
     <div className='flex items-center justify-around px-0 md:px-20 py-2'>
         {category.map((item,index)=>(
-            <div className='bg-white p-1 md:p-2 flex  items-end justify-center border border-[#FF9899] rounded-xl' key={index}>
+            <div className='bg-white p-1 md:p-2 flex  items-end justify-center border border-[#cc9900] rounded-xl' key={index}>
 
                
                 <h6 className='text-xs md:text-sm font-semibold'>{item.name}</h6>

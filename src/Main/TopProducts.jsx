@@ -75,7 +75,7 @@ export default function TopProducts() {
         <p className="text-sm ">View all</p>
       </div>
       <div className="px-3">
-        <hr className="border border-[#D3D3D3]" />
+        <hr className="border border-[#fff0e6]" />
       </div>
       
       <br />

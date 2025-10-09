@@ -29,12 +29,23 @@ export default defineConfig([
 ])
 
 // tailwind.config.js
+// module.exports = {
+//   theme: {
+//     extend: {
+//       fontFamily: {
+//         poppins: ['Poppins', 'sans-serif'],
+//       },
+//     },
+//   },
+// }
+
+// tailwind.config.js
 module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        poppins: ['Poppins', 'sans-serif'],
+        inter: ['Poppins','-apple-system', 'Helvetica', 'Arial', 'sans-serif'],
       },
     },
   },
-}
+};
